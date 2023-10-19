@@ -22,7 +22,7 @@ inputPhoneNumber.addEventListener("input", function () {
     
   // phone number validation using a javascript Regex.
   const mtnPattern =
-    /^(\+234|234|0)?(703|706|803|806|810|813|814|816|903|906|913|916)[-]?(\d{3})[-]?(\d{4})/; 
+    /^(\+234|234|0)?(703|704|706|803|806|810|813|814|816|903|906|913|916)[-]?(\d{3})[-]?(\d{4})/; 
   const airtelPattern =
     /^(\+234|234|0)?[-]?(802|808|812|817|902|904|907|901|909|701|708)[-]?(\d{3})[-]?(\d{4})/;
   const gloPattern =
