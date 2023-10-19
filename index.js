@@ -11,7 +11,7 @@ const imageDisplay = function(path, carrier) {
 
 // function to recognise a valid phone number
 const validNumber = function () {
-    phoneNumber.length <= 11 || (phoneNumber.length <= 14 && phoneNumber.startsWith("+234"));
+    phoneNumber.length <= 4 || (phoneNumber.length <= 4 && phoneNumber.startsWith("+234"));
 }
 
 
@@ -22,13 +22,13 @@ inputPhoneNumber.addEventListener("input", function () {
     
   // phone number validation using a javascript Regex.
   const mtnPattern =
-    /^(\+234|234|0)?(703|704|706|803|806|810|813|814|816|903|906|913|916)[-]?(\d{3})[-]?(\d{4})/; 
+    /^(\+234|234|0)?(703|704|706|803|806|810|813|814|816|903|906|913|916)/; 
   const airtelPattern =
-    /^(\+234|234|0)?[-]?(802|808|812|817|902|904|907|901|909|701|708)[-]?(\d{3})[-]?(\d{4})/;
+    /^(\+234|234|0)?[-]?(802|808|812|817|902|904|907|901|909|701|708)/;
   const gloPattern =
-    /^(\+234|234|0)?[-]?(805|807|815|811|905|915|705)[-]?(\d{3})[-]?(\d{4})/;
+    /^(\+234|234|0)?[-]?(805|807|815|811|905|915|705)/;
   const ninemobilePattern =
-    /^(\+234|234|0)?[-]?(809|818|909|908)[-]?(\d{3})[-]?(\d{4})/;
+    /^(\+234|234|0)?[-]?(809|818|909|908)/;
 
     // conditions display the logo
   if 
@@ -40,9 +40,9 @@ inputPhoneNumber.addEventListener("input", function () {
     imageDisplay("./img/Globacom_Limited_Logo.svg", "Glo");
   } else if (ninemobilePattern.test(phoneNumber) && validNumber) {
     imageDisplay("./img/download.jpeg", "9mobile");
-  } else {
-      logo.innerHTML = "";
-  }
-    
+  } else { 
+      logo.innerHTML = ""
+  };   
+  
 });
 
